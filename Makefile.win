@@ -1,0 +1,48 @@
+# Project: reference-system-products
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++rus.exe
+CC   = gccrus.exe
+WINDRES = windres.exe
+RES  = reference-system-products_private.res
+OBJ  = main.o work_file.o comandy.o user_interface.o base.o edit_product.o $(RES)
+LINKOBJ  = main.o work_file.o comandy.o user_interface.o base.o edit_product.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = reference-system-products.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before reference-system-products.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "reference-system-products.exe" $(LIBS)
+
+main.o: main.C
+	$(CPP) -c main.C -o main.o $(CXXFLAGS)
+
+work_file.o: work_file.C
+	$(CPP) -c work_file.C -o work_file.o $(CXXFLAGS)
+
+comandy.o: comandy.C
+	$(CPP) -c comandy.C -o comandy.o $(CXXFLAGS)
+
+user_interface.o: user_interface.c
+	$(CPP) -c user_interface.c -o user_interface.o $(CXXFLAGS)
+
+base.o: base.c
+	$(CPP) -c base.c -o base.o $(CXXFLAGS)
+
+edit_product.o: edit_product.C
+	$(CPP) -c edit_product.C -o edit_product.o $(CXXFLAGS)
+
+reference-system-products_private.res: reference-system-products_private.rc 
+	$(WINDRES) -i reference-system-products_private.rc --input-format=rc -o reference-system-products_private.res -O coff 
