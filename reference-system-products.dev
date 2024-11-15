@@ -3,9 +3,9 @@ FileName=reference-system-products.dev
 Name=reference-system-products
 UnitCount=11
 Type=1
-Ver=1
+Ver=2
 ObjFiles=
-Includes=
+Includes=F:\01-Projects\SourceCode\reference-system-products\inc;F:\01-Projects\SourceCode\reference-system-products\src
 Libs=
 PrivateResource=reference-system-products_private.rc
 ResourceIncludes=
@@ -20,29 +20,21 @@ ObjectOutput=
 OverrideOutput=0
 OverrideOutputName=reference-system-products.exe
 HostApplication=
-Folders=
+Folders=inc,src
 CommandLine=
 UseCustomMakefile=0
 CustomMakefile=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000
-
-[Unit1]
-FileName=main.C
-CompileCpp=1
-Folder=reference-system-products
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
+CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4;0;0;0
+LogOutput=
+LogOutputEnabled=0
 
 [Unit2]
-FileName=work_file.C
+FileName=inc\edit_product.h
 CompileCpp=1
-Folder=reference-system-products
+Folder=inc
 Compile=1
 Link=1
 Priority=1000
@@ -50,9 +42,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=work_file.h
+FileName=inc\user_interface.h
 CompileCpp=1
-Folder=reference-system-products
+Folder=inc
 Compile=1
 Link=1
 Priority=1000
@@ -67,7 +59,7 @@ Build=1
 LanguageID=1033
 CharsetID=1252
 CompanyName=
-FileVersion=
+FileVersion=0.1.1.1
 FileDescription=Developed using the Dev-C++ IDE
 InternalName=
 LegalCopyright=
@@ -76,11 +68,12 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+SyncProduct=0
 
 [Unit5]
-FileName=comandy.h
+FileName=main.C
 CompileCpp=1
-Folder=reference-system-products
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -88,19 +81,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=comandy.C
+FileName=inc\work_file.h
 CompileCpp=1
-Folder=reference-system-products
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
-FileName=user_interface.c
-CompileCpp=1
-Folder=reference-system-products
+Folder=inc
 Compile=1
 Link=1
 Priority=1000
@@ -108,19 +91,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=base.h
+FileName=src\work_file.C
 CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit11]
-FileName=edit_product.C
-CompileCpp=1
-Folder=reference-system-products
+Folder=src
 Compile=1
 Link=1
 Priority=1000
@@ -128,9 +101,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=user_interface.h
+FileName=src\edit_product.c
 CompileCpp=1
-Folder=reference-system-products
+Folder=src
 Compile=1
 Link=1
 Priority=1000
@@ -138,9 +111,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=base.c
+FileName=src\user_interface.c
 CompileCpp=1
-Folder=
+Folder=src
 Compile=1
 Link=1
 Priority=1000
@@ -148,9 +121,39 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=edit_product.h
+FileName=src\base.c
 CompileCpp=1
-Folder=reference-system-products
+Folder=src
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=src\comandy.C
+CompileCpp=1
+Folder=src
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit1]
+FileName=inc\comandy.h
+CompileCpp=1
+Folder=inc
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit11]
+FileName=inc\base.h
+CompileCpp=1
+Folder=inc
 Compile=1
 Link=1
 Priority=1000

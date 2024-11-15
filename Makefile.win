@@ -1,48 +1,48 @@
 # Project: reference-system-products
-# Makefile created by Dev-C++ 4.9.9.2
+# Makefile created by Embarcadero Dev-C++ 6.3
 
-CPP  = g++rus.exe
-CC   = gccrus.exe
-WINDRES = windres.exe
-RES  = reference-system-products_private.res
-OBJ  = main.o work_file.o comandy.o user_interface.o base.o edit_product.o $(RES)
-LINKOBJ  = main.o work_file.o comandy.o user_interface.o base.o edit_product.o $(RES)
-LIBS =  -L"C:/Dev-Cpp/lib"  
-INCS =  -I"C:/Dev-Cpp/include" 
-CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
-BIN  = reference-system-products.exe
-CXXFLAGS = $(CXXINCS)  
-CFLAGS = $(INCS)  
-RM = rm -f
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = reference-system-products_private.res
+OBJ      = main.o src/base.o src/comandy.o src/edit_product.o src/user_interface.o src/work_file.o $(RES)
+LINKOBJ  = main.o src/base.o src/comandy.o src/edit_product.o src/user_interface.o src/work_file.o $(RES)
+LIBS     = -L"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/lib" -L"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/include" -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"F:/01-Projects/SourceCode/reference-system-products/inc" -I"F:/01-Projects/SourceCode/reference-system-products/src"
+CXXINCS  = -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/include" -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Soft/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++" -I"F:/01-Projects/SourceCode/reference-system-products/inc" -I"F:/01-Projects/SourceCode/reference-system-products/src"
+BIN      = reference-system-products.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = D:\Soft\Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable\devcpp.exe INTERNAL_DEL
 
 .PHONY: all all-before all-after clean clean-custom
 
-all: all-before reference-system-products.exe all-after
-
+all: all-before $(BIN) all-after
 
 clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+	${DEL} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CPP) $(LINKOBJ) -o "reference-system-products.exe" $(LIBS)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
 main.o: main.C
 	$(CPP) -c main.C -o main.o $(CXXFLAGS)
 
-work_file.o: work_file.C
-	$(CPP) -c work_file.C -o work_file.o $(CXXFLAGS)
+src/base.o: src/base.c
+	$(CPP) -c src/base.c -o src/base.o $(CXXFLAGS)
 
-comandy.o: comandy.C
-	$(CPP) -c comandy.C -o comandy.o $(CXXFLAGS)
+src/comandy.o: src/comandy.C
+	$(CPP) -c src/comandy.C -o src/comandy.o $(CXXFLAGS)
 
-user_interface.o: user_interface.c
-	$(CPP) -c user_interface.c -o user_interface.o $(CXXFLAGS)
+src/edit_product.o: src/edit_product.c
+	$(CPP) -c src/edit_product.c -o src/edit_product.o $(CXXFLAGS)
 
-base.o: base.c
-	$(CPP) -c base.c -o base.o $(CXXFLAGS)
+src/user_interface.o: src/user_interface.c
+	$(CPP) -c src/user_interface.c -o src/user_interface.o $(CXXFLAGS)
 
-edit_product.o: edit_product.C
-	$(CPP) -c edit_product.C -o edit_product.o $(CXXFLAGS)
+src/work_file.o: src/work_file.C
+	$(CPP) -c src/work_file.C -o src/work_file.o $(CXXFLAGS)
 
 reference-system-products_private.res: reference-system-products_private.rc 
 	$(WINDRES) -i reference-system-products_private.rc --input-format=rc -o reference-system-products_private.res -O coff 
+

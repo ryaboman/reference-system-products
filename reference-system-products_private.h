@@ -1,8 +1,8 @@
 /* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
 /* DO NOT EDIT ! */
 
-#ifndef HHH_PRIVATE_H
-#define HHH_PRIVATE_H
+#ifndef REFERENCE-SYSTEM-PRODUCTS_PRIVATE_H
+#define REFERENCE-SYSTEM-PRODUCTS_PRIVATE_H
 
 /* VERSION DEFINITIONS */
 #define VER_STRING	"0.1.1.1"
@@ -11,7 +11,7 @@
 #define VER_RELEASE	1
 #define VER_BUILD	1
 #define COMPANY_NAME	""
-#define FILE_VERSION	""
+#define FILE_VERSION	"0.1.1.1"
 #define FILE_DESCRIPTION	"Developed using the Dev-C++ IDE"
 #define INTERNAL_NAME	""
 #define LEGAL_COPYRIGHT	""
@@ -20,4 +20,4 @@
 #define PRODUCT_NAME	""
 #define PRODUCT_VERSION	""
 
-#endif /*HHH_PRIVATE_H*/
+#endif /*REFERENCE-SYSTEM-PRODUCTS_PRIVATE_H*/
