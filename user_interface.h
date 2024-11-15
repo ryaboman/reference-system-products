@@ -1,6 +1,6 @@
 
-#ifndef comandy_h
-#define comandy_h
+#ifndef user_interface_h
+#define user_interface_h
 
 
 void printf_info(void);
